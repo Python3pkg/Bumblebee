@@ -75,7 +75,7 @@ def getRuleFromNode(node):
     rule_class = _tags[node.tag]
 
     kwargs = {'conditions': []}
-    for name, value in list(node.attrib.items()):
+    for name, value in node.attrib.items():
         stripped_name = _removeall(name, 'if-', 'not-', \
                             *['-' + s for s in _selectors])
         if name.startswith('if-'):

@@ -1,7 +1,7 @@
 
 
 def spacedList(val, required=True):
-    if not isinstance(val, str):
+    if not isinstance(val, basestring):
         if required:
             raise Exception("Expected string to work with.")
         else:
